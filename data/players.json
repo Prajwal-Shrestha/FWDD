@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Erling Haaland",
+    "club": "Manchester City",
+    "position": "Forward",
+    "price": 14.0,
+    "points": 156,
+    "goals": 36,
+    "assists": 8,
+    "image": "../assets/images/haaland.png"
+  },
+  {
+    "id": 2,
+    "name": "Mohamed Salah",
+    "club": "Liverpool",
+    "position": "Forward",
+    "price": 13.5,
+    "points": 149,
+    "goals": 24,
+    "assists": 13,
+    "image": "../assets/images/salah.png"
+  },
+  {
+    "id": 3,
+    "name": "Bukayo Saka",
+    "club": "Arsenal",
+    "position": "Midfielder",
+    "price": 10.5,
+    "points": 140,
+    "goals": 16,
+    "assists": 12,
+    "image": "../assets/images/saka.png"
+  },
+  {
+    "id": 4,
+    "name": "Cole Palmer",
+    "club": "Chelsea",
+    "position": "Midfielder",
+    "price": 9.5,
+    "points": 132,
+    "goals": 18,
+    "assists": 11,
+    "image": "../assets/images/palmer.png"
+  },
+  {
+    "id": 5,
+    "name": "Bruno Fernandes",
+    "club": "Manchester United",
+    "position": "Midfielder",
+    "price": 9.0,
+    "points": 121,
+    "goals": 11,
+    "assists": 10,
+    "image": "../assets/images/bruno.png"
+  },
+  {
+    "id": 6,
+    "name": "Virgil van Dijk",
+    "club": "Liverpool",
+    "position": "Defender",
+    "price": 6.5,
+    "points": 115,
+    "goals": 4,
+    "assists": 2,
+    "image": "../assets/images/vandijk.png"
+  },
+  {
+    "id": 7,
+    "name": "Rodri",
+    "club": "Manchester City",
+    "position": "Midfielder",
+    "price": 8.0,
+    "points": 110,
+    "goals": 8,
+    "assists": 7,
+    "image": "../assets/images/rodri.png"
+  },
+  {
+    "id": 8,
+    "name": "Jude Bellingham",
+    "club": "Real Madrid",
+    "position": "Midfielder",
+    "price": 11.0,
+    "points": 148,
+    "goals": 19,
+    "assists": 6,
+    "image": "../assets/images/bellingham.png"
+  },
+  {
+    "id": 9,
+    "name": "Vinicius Jr",
+    "club": "Real Madrid",
+    "position": "Forward",
+    "price": 12.0,
+    "points": 145,
+    "goals": 22,
+    "assists": 14,
+    "image": "../assets/images/vinicius.png"
+  },
+  {
+    "id": 10,
+    "name": "Harry Kane",
+    "club": "Bayern Munich",
+    "position": "Forward",
+    "price": 13.0,
+    "points": 160,
+    "goals": 38,
+    "assists": 8,
+    "image": "../assets/images/kane.png"
+  }
+]

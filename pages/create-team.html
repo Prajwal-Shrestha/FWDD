@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Team | Fantasy Football</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-futbol"></i>
+
+                <h2>Fantasy Football</h2>
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="players.html">
+                            <i class="fa-solid fa-users"></i>
+                            Players
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="create-team.html">
+                            <i class="fa-solid fa-plus"></i>
+                            Create Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="my-team.html">
+                            <i class="fa-solid fa-shield"></i>
+                            My Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-calendar"></i>
+                            Fixtures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Statistics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-trophy"></i>
+                            Leaderboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Create Team</h1>
+
+                    <p>Select your fantasy squad.</p>
+
+                </div>
+
+            </header>
+
+            <div class="team-layout">
+
+                <!-- Football Pitch -->
+
+                <div class="pitch">
+
+                    <h2>Football Pitch</h2>
+
+                    <div class="formation">
+
+                        <div class="row">
+                            <div class="slot">ST</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="slot">LW</div>
+                            <div class="slot">RW</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="slot">CM</div>
+                            <div class="slot">CM</div>
+                            <div class="slot">CAM</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="slot">LB</div>
+                            <div class="slot">CB</div>
+                            <div class="slot">CB</div>
+                            <div class="slot">RB</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="slot">GK</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Selected Team -->
+
+                <div class="selected-team">
+
+                    <h2>Your Squad</h2>
+
+                    <div id="teamList"></div>
+
+                    <div class="budget">
+
+                        <h3>Total Players:
+                            <span id="count">0</span>
+                        </h3>
+
+                    </div>
+
+                    <button id="saveTeam">
+
+                        Save Team
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/team.js"></script>
+
+</body>
+
+</html>

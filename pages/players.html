@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Players | Fantasy Football</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= Sidebar ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-futbol"></i>
+
+                <h2>Fantasy Football</h2>
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="players.html">
+                            <i class="fa-solid fa-users"></i>
+                            Players
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="create-team.html">
+                            <i class="fa-solid fa-plus"></i>
+                            Create Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="my-team.html">
+                            <i class="fa-solid fa-shield"></i>
+                            My Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-calendar"></i>
+                            Fixtures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Statistics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-trophy"></i>
+                            Leaderboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <!-- ================= Main ================= -->
+
+        <main class="main">
+
+            <!-- Top Navigation -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Players</h1>
+
+                    <p>Browse and select football players.</p>
+
+                </div>
+
+                <div class="profile">
+
+                    <img src="../assets/images/profile.jpg" alt="Profile">
+
+                    <div>
+
+                        <h4>Prajwal</h4>
+
+                        <small>Manager</small>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Search Area -->
+
+            <section class="search-box">
+
+                <div class="search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="searchPlayer" placeholder="Search player...">
+
+                </div>
+
+                <select id="positionFilter">
+
+                    <option value="">Position</option>
+
+                    <option>Goalkeeper</option>
+
+                    <option>Defender</option>
+
+                    <option>Midfielder</option>
+
+                    <option>Forward</option>
+
+                </select>
+
+                <select id="clubFilter">
+
+                    <option value="">Club</option>
+
+                    <option>Manchester City</option>
+
+                    <option>Liverpool</option>
+
+                    <option>Arsenal</option>
+
+                    <option>Chelsea</option>
+
+                    <option>Manchester United</option>
+
+                    <option>Real Madrid</option>
+
+                </select>
+
+                <select id="sortFilter">
+
+                    <option value="">Sort</option>
+
+                    <option value="points">
+                        Highest Points
+                    </option>
+
+                    <option value="price">
+                        Highest Price
+                    </option>
+
+                </select>
+
+            </section>
+
+            <!-- Player Grid -->
+
+            <section class="player-grid" id="playerGrid">
+
+                <!-- JavaScript will generate player cards -->
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/players.js"></script>
+
+</body>
+
+</html>

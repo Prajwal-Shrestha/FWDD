@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Team | Fantasy Football</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-futbol"></i>
+
+                <h2>Fantasy Football</h2>
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="players.html">
+                            <i class="fa-solid fa-users"></i>
+                            Players
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="create-team.html">
+                            <i class="fa-solid fa-plus"></i>
+                            Create Team
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="my-team.html">
+                            <i class="fa-solid fa-shield"></i>
+                            My Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-calendar"></i>
+                            Fixtures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Statistics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-trophy"></i>
+                            Leaderboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>My Team</h1>
+
+                    <p>Your saved fantasy squad.</p>
+
+                </div>
+
+            </header>
+
+            <div class="my-team-layout">
+
+                <div class="pitch">
+
+                    <h2>Starting XI</h2>
+
+                    <div id="pitchPlayers" class="pitchPlayers">
+
+                    </div>
+
+                </div>
+
+                <div class="team-summary">
+
+                    <h2>Team Summary</h2>
+
+                    <div class="summary-card">
+
+                        <h3>Total Players</h3>
+
+                        <h1 id="totalPlayers">0</h1>
+
+                    </div>
+
+                    <div class="summary-card">
+
+                        <h3>Total Points</h3>
+
+                        <h1 id="totalPoints">0</h1>
+
+                    </div>
+
+                    <div class="summary-card">
+
+                        <h3>Total Budget</h3>
+
+                        <h1 id="totalBudget">£0M</h1>
+
+                    </div>
+
+                    <button id="resetTeam">
+
+                        Reset Team
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/my-team.js"></script>
+
+</body>
+
+</html>
