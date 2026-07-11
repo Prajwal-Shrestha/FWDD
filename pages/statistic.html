@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistics Board — Fantasy Football</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../css/statistic.css">
+</head>
+<body>
+<aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-futbol"></i>
+          <h2>Fantasy Football</h2>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="players.html">
+                <i class="fa-solid fa-user"></i>
+                Players
+              </a>
+            </li>
+            <li>
+              <a href="matchdetails.html">
+                <i class="fa-solid fa-calendar"></i>
+                Match Details
+              </a>
+            </li>
+            <li>
+              <a href="my-team.html">
+                <i class="fa-solid fa-shirt"></i>
+                My Team
+              </a>
+            </li>
+
+            <li>
+              <a href="transfer.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transfer
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-trophy"></i>
+                Leaderboard
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-futbol"></i>
+                Leauge
+              </a>
+            </li>
+            <li class="active">
+              <a href="statistic.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Statistics
+              </a>
+            </li>
+            <li>
+              <a href="live.html">
+                <i class="fa-solid fa-tv"></i>
+                Live
+              </a>
+            </li>
+            <li>
+              <a href="fixtures.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                Fixtures
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+<div class="content">
+
+  <div class="topbar">
+    <h1>Statistics Board</h1>
+    <div class="profile" tabindex="0">
+      <div class="avatar"><i class="fa-solid fa-user"></i></div>
+      <span>Profile</span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="players">Players</button>
+    <button class="tab-btn" data-tab="teams">Teams</button>
+  </div>
+  <div class="tabs-divider"></div>
+
+  <!-- Overview: both sections -->
+  <div class="tab-panel active" id="panel-overview">
+    <div class="stats-grid">
+      <div class="panel">
+        <h2>Top Score</h2>
+        <div id="scoreListOverview"></div>
+      </div>
+      <div class="panel">
+        <h2>Top Teams</h2>
+        <div class="donut-wrap">
+          <div class="donut" id="donutOverview" role="img" aria-label="Team points distribution chart">
+            <div class="donut-hole">
+              <span class="total-label">Total Pts</span>
+              <span class="total-value" id="totalPointsOverview">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="teamListOverview"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Players only -->
+  <div class="tab-panel" id="panel-players">
+    <div class="stats-grid single">
+      <div class="panel">
+        <h2>Top Score</h2>
+        <div id="scoreListPlayers"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teams only -->
+  <div class="tab-panel" id="panel-teams">
+    <div class="stats-grid single">
+      <div class="panel">
+        <h2>Top Teams</h2>
+        <div class="donut-wrap">
+          <div class="donut" id="donutTeams" role="img" aria-label="Team points distribution chart">
+            <div class="donut-hole">
+              <span class="total-label">Total Pts</span>
+              <span class="total-value" id="totalPointsTeams">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="teamListTeams"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script src="../JS/statistic.js"></script>
+</body>
+</html>

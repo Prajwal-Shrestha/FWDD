@@ -127,18 +127,19 @@ function updateScore(matchId, scoreA, scoreB, status) {
 
 const sequence = [
   { at: 2500, matchId: 1, a: 1, b: 0, status: "live" },
-  { at: 4000, matchId: 2, a: 1, b: 1, status: "live" },
+  { at: 4000, matchId: 2, a: 1, b: 0, status: "live" },
+  { at: 5000, matchId: 2, a: 1, b: 1, status: "live" },
   { at: 6000, matchId: 3, a: 0, b: 1, status: "live" },
   { at: 8000, matchId: 1, a: 1, b: 1, status: "live" },
   { at: 9500, matchId: 2, a: 2, b: 1, status: "live" },
   { at: 11000, matchId: 3, a: 1, b: 3, status: "live" },
   { at: 17500, matchId: 1, a: 2, b: 1, status: "ft" },
   { at: 14500, matchId: 2, a: 2, b: 3, status: "ft" },
-    { at: 19500, matchId: 3, a: 1, b: 5, status: "ft" },
-  {at:9500, matchId: 4, a: 1, b: 0, status: "live"},
-  {at:11500, matchId: 4, a: 1, b: 1, status: "live"},
-    { at: 13500, matchId: 4, a: 2, b: 1, status: "ft" },
-  {at: 20500, matchId: 4, a: 2, b: 1, status: "ft" },
+  { at: 19500, matchId: 3, a: 1, b: 5, status: "ft" },
+  { at: 9500, matchId: 4, a: 1, b: 0, status: "live" },
+  { at: 11500, matchId: 4, a: 1, b: 1, status: "live" },
+  { at: 13500, matchId: 4, a: 2, b: 1, status: "ft" },
+  { at: 20500, matchId: 4, a: 2, b: 1, status: "ft" },
 ];
 
 sequence.forEach((u) => {

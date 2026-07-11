@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background: #f3f7f4;
+  color: #0b1220;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+.logo h2 {
+  font-family: "Space Grotesk", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* ===== Sidebar (as provided) ===== */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
+  overflow: auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+.logo i {
+  color: #16a34a;
+  font-size: 32px;
+}
+.logo h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.sidebar ul li {
+  margin-left: -50px;
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+  color: white;
+}
+.sidebar ul li a i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.sidebar ul li a:hover {
+  background: #16a34a;
+}
+.sidebar ul li.active a {
+  background: #16a34a;
+}
+
+/* ===== Main layout ===== */
+.content {
+  margin-left: 260px;
+  padding: 36px 48px 60px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0c1b36;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px 9px 10px;
+  border-radius: 100px;
+  background: #fff;
+  border: 1px solid #e3e9e4;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0c1b36;
+  box-shadow: 0 8px 20px -10px rgba(8, 18, 38, 0.25);
+  cursor: pointer;
+}
+.profile .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0c1b36, #16a34a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* ===== Tabs ===== */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.tab-btn {
+  background: #fff;
+  border: 1px solid #e3e9e4;
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6c7c8f;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.tab-btn:hover {
+  border-color: #16a34a;
+  color: #0c1b36;
+}
+.tab-btn.active {
+  background: #0c1b36;
+  border-color: #0c1b36;
+  color: #fff;
+}
+.tabs-divider {
+  border-bottom: 1px solid #e3e9e4;
+  margin-bottom: 28px;
+}
+
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+/* ===== Grid / panels ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.stats-grid.single {
+  grid-template-columns: 1fr;
+  max-width: 520px;
+}
+.panel {
+  background: #fff;
+  border: 1px solid #e6ebe7;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -16px rgba(8, 18, 38, 0.18);
+  padding: 26px 28px 20px;
+}
+.panel h2 {
+  margin: 0 0 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0c1b36;
+}
+
+/* ===== Top Score list ===== */
+.score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 2px;
+  border-bottom: 1px solid #f0f3f1;
+  font-size: 0.98rem;
+}
+.score-row:last-child {
+  border-bottom: none;
+}
+.score-row .rank-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0c1b36;
+  font-weight: 500;
+}
+.score-row .rank-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #eef6f0;
+  color: #16a34a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.score-row:nth-child(1) .rank-num {
+  background: #16a34a;
+  color: #fff;
+}
+.score-row .goal-count {
+  font-weight: 700;
+  color: #0c1b36;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* ===== Donut chart ===== */
+.donut-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.donut {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+}
+.donut-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.donut-hole .total-label {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #98a5ab;
+  font-weight: 600;
+}
+.donut-hole .total-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0c1b36;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 2px;
+  border-bottom: 1px solid #f0f3f1;
+}
+.team-row:last-child {
+  border-bottom: none;
+}
+.team-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex: 0 0 auto;
+}
+.team-crest {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  background: #fff;
+  margin:0 10px;
+}
+.team-crest img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+.team-row .team-name {
+  flex: 1;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: #0c1b36;
+}
+.team-row .team-points {
+  font-weight: 700;
+  color: #0c1b36;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.94rem;
+}
+
+@media (max-width: 860px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .content {
+    margin-left: 0;
+    padding: 24px 18px 40px;
+  }
+  .tabs {
+    flex-wrap: wrap;
+  }
+}
