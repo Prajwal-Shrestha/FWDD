@@ -55,60 +55,61 @@ select{
    SIDEBAR
 ================================== */
 
-.sidebar{
-    width:270px;
-    height:100vh;
-    background:#ffffff;
-    border-right:1px solid #e5e7eb;
-    position:fixed;
-    left:0;
-    top:0;
-    padding:40px 25px;
-    overflow-y:auto;
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
+  overflow: auto;
 }
 
-.logo{
-    text-align:center;
-    margin-bottom:60px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
 }
 
-.logo img{
-    width:150px;
+.logo i {
+  color: #16a34a;
+  font-size: 32px;
 }
 
-.sidebar ul{
-    list-style:none;
+.logo h2 {
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.sidebar li{
-    margin-bottom:12px;
+.sidebar ul li {
+   
+  margin-bottom: 10px;
 }
 
-.sidebar li a{
-    display:flex;
-    align-items:center;
-    gap:22px;
-    padding:15px 18px;
-    border-radius:12px;
-    color:#222;
-    font-size:18px;
-    font-weight:500;
-    transition:.3s;
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.sidebar li a i{
-    width:35px;
-    text-align:center;
-    font-size:28px;
+.sidebar ul li a i {
+  width: 20px;
+  height:20px;
+  text-align: center;
 }
 
-.sidebar li:hover a{
-    background:#f3f4f6;
+.sidebar ul li a:hover {
+  background: #16a34a;
 }
 
-.sidebar li.active a{
-    background:#16a34a;
-    color:#fff;
+.sidebar ul li.active a {
+  background: #16a34a;
 }
 /* ==========================================
    MAIN
