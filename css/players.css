@@ -1,0 +1,370 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    font-family:inherit;
+}
+
+input,
+select{
+    font-family:inherit;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.main{
+    margin-left:260px;
+    flex:1;
+    padding:35px;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+    width:260px;
+    background:#111827;
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    padding:25px;
+    overflow:auto;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:45px;
+}
+
+.logo i{
+    color:#16a34a;
+    font-size:32px;
+}
+
+.logo h2{
+    font-size:22px;
+    font-weight:700;
+}
+
+.sidebar ul li{
+    margin-bottom:10px;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    border-radius:10px;
+    transition:.3s;
+    color:white;
+}
+
+.sidebar ul li a i{
+    width:20px;
+    text-align:center;
+}
+
+.sidebar ul li a:hover{
+    background:#16a34a;
+}
+
+.sidebar ul li.active a{
+    background:#16a34a;
+}
+
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.topbar h1{
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.topbar p{
+    color:#64748b;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.profile img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+    background:#ddd;
+}
+
+.profile h4{
+    font-size:16px;
+}
+
+.profile small{
+    color:#64748b;
+}
+
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
+.search-box{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.search{
+    background:white;
+    display:flex;
+    align-items:center;
+    padding:0 18px;
+    border-radius:12px;
+    border:1px solid #e5e7eb;
+}
+
+.search i{
+    color:#94a3b8;
+}
+
+.search input{
+    flex:1;
+    padding:15px;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+.search-box select{
+    border:1px solid #e5e7eb;
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    outline:none;
+}
+
+/* ==========================================
+   PLAYER GRID
+========================================== */
+
+.player-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* ==========================================
+   PLAYER CARD
+========================================== */
+
+.player-card{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+.player-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,0,0,.12);
+}
+
+.player-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:auto;
+    border:4px solid #16a34a;
+    margin-bottom:18px;
+}
+
+.player-card h3{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.club{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.position{
+    display:block;
+    width:max-content;
+    margin:0 auto 20px;
+    background:#dcfce7;
+    color:#16a34a;
+    padding:6px 16px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.stat{
+    flex:1;
+}
+
+.stat h4{
+    font-size:14px;
+    color:#64748b;
+}
+
+.stat p{
+    margin-top:5px;
+    font-weight:700;
+    color:#16a34a;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.buttons button{
+    flex:1;
+    padding:12px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.view-btn{
+    background:#2563eb;
+    color:white;
+}
+
+.view-btn:hover{
+    background:#1d4ed8;
+}
+
+.team-btn{
+    background:#16a34a;
+    color:white;
+}
+
+.team-btn:hover{
+    background:#15803d;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .main{
+        margin-left:220px;
+    }
+
+    .search-box{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .main{
+        margin-left:0;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .player-grid{
+        grid-template-columns:1fr;
+    }
+
+}
