@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Details — Fantasy Football</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/matchdetail.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fa-solid fa-futbol"></i>
+        <h2>Fantasy Football</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="players.html">
+              <i class="fa-solid fa-users"></i>
+              Players
+            </a>
+          </li>
+          <li class="active">
+            <a href="matchdetails.html">
+              <i class="fa-solid fa-calendar"></i>
+              Match Details
+            </a>
+          </li>
+          <li></li>
+          <li>
+            <a href="my-team.html">
+              <i class="fa-solid fa-shirt"></i>
+              My Team
+            </a>
+          </li>
+          <li>
+            <a href="transfer.html">
+              <i class="fa-solid fa-right-left"></i>
+              Transfer
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-trophy"></i>
+              Leaderboard
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-futbol"></i>
+              Leauge
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-chart-column"></i>
+              Statistics
+            </a>
+          </li>
+          <li>
+            <a href="live.html">
+              <i class="fa-solid fa-tv"></i>
+              Live
+            </a>
+          </li>
+          <li>
+            <a href="fixtures.html">
+              <i class="fa-solid fa-diagram-project"></i>
+              Fixtures
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <div class="match-header">
+        <span class="league-tag">Premiere League</span>
+        <h1 id="matchTitle">Premiere League — Game 5</h1>
+      </div>
+
+      <div class="scoreboard">
+        <div class="team-block" id="teamOneBlock">
+          <div class="crest">
+            <img
+              src="../assets/images/manchestercity.png"
+              alt="Manchester City" />
+          </div>
+          <div class="team-name">Manchester City</div>
+        </div>
+
+        <div class="score-center">
+          <div class="score-value">
+            <span id="scoreOne" class="bump">0</span>&nbsp;-&nbsp;<span
+              id="scoreTwo"
+              >0</span
+            >
+          </div>
+          <div class="match-status live" id="matchStatus">
+            <span class="dot"></span>
+            <span id="statusText">Kick-off</span>
+          </div>
+        </div>
+
+        <div class="team-block" id="teamTwoBlock">
+          <div class="crest">
+            <img src="../assets/images/chelsea.png" alt="Chelsea" />
+          </div>
+          <div class="team-name">Chelsea</div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="lineups">Lineups</button>
+        <button class="tab-btn" data-tab="stats">Stats</button>
+        <button class="tab-btn" data-tab="events">Events</button>
+      </div>
+
+      <div class="tab-panel active" id="panel-overview">
+        <div id="eventsList">
+          <div class="empty-events" id="noEventsMsg">
+            No goals yet — match in progress…
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-lineups">
+        <div class="placeholder-panel">
+          <i class="fa-solid fa-shirt"></i>
+          Lineups will appear here once teams are confirmed.
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-stats">
+        <div class="placeholder-panel">
+          <i class="fa-solid fa-chart-column"></i>
+          Match statistics will appear here.
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-events">
+        <div class="placeholder-panel">
+          <i class="fa-solid fa-list"></i>
+          Full timeline of match events will appear here.
+        </div>
+      </div>
+    </div>
+    <script src="../JS/matchdetail.js"></script>
+  </body>
+</html>
