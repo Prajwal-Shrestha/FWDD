@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Scores — Fantasy Football</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../css/live.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="logo">
+    <i class="fa-solid fa-futbol"></i>
+    <h2>Fantasy Football</h2>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="dashboard.html">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="players.html">
+          <i class="fa-solid fa-users"></i>
+          Players
+        </a>
+      </li>
+      <li>
+        <a href="matchdetail.html">
+          <i class="fa-solid fa-calendar"></i>
+          Match Details
+        </a>
+      </li>
+      <li></li>
+      <li>
+        <a href="my-team.html">
+          <i class="fa-solid fa-shirt"></i>
+          My Team
+        </a>
+      </li>
+      <li>
+        <a href="transfer.html">
+          <i class="fa-solid fa-left-right"></i>
+          Transfer
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-trophy"></i>
+          Leaderboard
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-futbol"></i>
+          Leauge
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-chart-column"></i>
+          Statistics
+        </a>
+      </li>
+      <li class="active">
+        <a href="live.html">
+          <i class="fa-solid fa-tv"></i>
+          Live
+        </a>
+      </li>
+      <li>
+        <a href="fixtures.html">
+          <i class="fa-solid fa-diagram-project"></i>
+          Fixtures
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<div class="content">
+
+  <div class="topbar">
+    <h1>Live scores <span class="live-pill"><span class="dot"></span>Live</span></h1>
+    <div class="profile" tabindex="0">
+      <div class="avatar"><i class="fa-solid fa-user"></i></div>
+      <span>Profile</span>
+    </div>
+  </div>
+  <p class="subtext">Scores update automatically as goals go in.</p>
+
+  <div class="match-list" id="matchList"></div>
+</div>
+<script src="../JS/live.js"></script>
+</body>
+</html>
