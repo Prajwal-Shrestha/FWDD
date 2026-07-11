@@ -27,35 +27,74 @@ a {
 button {
   font-family: inherit;
 }
-
-.pitch-texture {
-  background-image: repeating-linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 0.045) 0px,
-    rgba(255, 255, 255, 0.045) 26px,
-    transparent 26px,
-    transparent 52px
-  );
+ul {
+  list-style: none;
 }
 
+
 .app {
-  display: grid;
-  grid-template-columns: 240px 1fr;
   min-height: 100vh;
 }
 
 .sidebar {
-  background: linear-gradient(185deg, #081226, #0c1b36 60%);
-  color: #f3f7f4;
-  padding: 28px 18px;
-  position: sticky;
+  width: 260px;
+  background: #111827;
+  color: white;
+  position: fixed;
   top: 0;
-  height: 100vh;
-  overflow-y: auto;
-  border-right: 1px solid #1e2f4e;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
+  overflow: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.logo i {
+  color: #16a34a;
+  font-size: 32px;
+}
+
+.logo h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar ul li {
+    margin-left:-50px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a i {
+  width: 20px;
+  height:20px;
+  text-align: center;
+}
+
+.sidebar ul li a:hover {
+  background: #16a34a;
+}
+
+.sidebar ul li.active a {
+  background: #16a34a;
 }
 main {
-  padding: 36px 44px 60px;
+    margin-left:260px;
+  padding: 36px 40px 60px;
 }
 .topbar {
   display: flex;
@@ -113,7 +152,7 @@ main {
   margin-bottom: 22px;
 }
 .search-box {
-  width: 800px;
+ flex:1;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -246,10 +285,10 @@ main {
   font-size: 0.98rem;
   color: #0c1b36;
 }
-.team-logo{
-    width:65px;
-    height:65px;
-    object-fit:contain;
+.team-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
 }
 .vs {
   color: #6c7c8f;

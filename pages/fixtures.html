@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixtures — Fantasy Football</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/fixtures.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-futbol"></i>
+          <h2>Fantasy Football</h2>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="players.html">
+                <i class="fa-solid fa-users"></i>
+                Players
+              </a>
+            </li>
+            <li>
+              <a href="matchdetail.html">
+                <i class="fa-solid fa-calendar"></i>
+                Match Details
+              </a>
+            </li>
+            <li></li>
+            <li>
+              <a href="my-team.html">
+                <i class="fa-solid fa-shirt"></i>
+                My Team
+              </a>
+            </li>
+
+            <li>
+              <a href="transfer.html">
+                <i class="fa-solid fa-left-right"></i>
+                Transfer
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-trophy"></i>
+                Leaderboard
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-futbol"></i>
+                Leauge
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                Statistics
+              </a>
+            </li>
+            <li>
+              <a href="live.html">
+                <i class="fa-solid fa-tv"></i>
+                Live
+              </a>
+            </li>
+            <li class="active">
+              <a href="fixtures.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                Fixtures
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="topbar">
+          <div>
+            <span class="eyebrow">Matchweek Schedule</span>
+            <h1>Fixtures</h1>
+          </div>
+          <div class="profile" tabindex="0">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder='Search by team, e.g. "Arsenal"'
+              aria-label="Search matches" />
+          </div>
+          <button class="search-btn" id="searchBtn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="section-bar pitch-texture">
+          <h2>Upcoming Matches</h2>
+          <span class="result-count" id="resultCount">5 matches</span>
+        </div>
+
+        <div class="match-panel">
+          <div class="match-head-row">
+            <span>Match</span>
+            <span>Date</span>
+            <span>Time</span>
+          </div>
+          <div id="matchList"></div>
+          <div class="empty-state" id="emptyState">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+            <strong>No fixtures found</strong>
+            No matches for that search — try a different team name.
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../JS/fixture_page.js"></script>
+  </body>
+</html>
