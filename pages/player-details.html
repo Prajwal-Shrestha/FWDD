@@ -41,7 +41,7 @@
               </a>
             </li>
             <li>
-              <a href="matchdetail.html">
+              <a href="matchdetails.html">
                 <i class="fa-solid fa-calendar"></i>
                 Match Details
               </a>
@@ -61,19 +61,19 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="leaderboard.html">
                 <i class="fa-solid fa-trophy"></i>
                 Leaderboard
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="league.html">
                 <i class="fa-solid fa-futbol"></i>
-                Leauge
+                League
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="statistics.html">
                 <i class="fa-solid fa-chart-column"></i>
                 Statistics
               </a>
@@ -112,7 +112,103 @@
 
             <section id="playerDetails">
 
-            </section>
+    <div class="player-header">
+
+        <div class="player-profile">
+
+            <img id="playerImage" src="" alt="Player">
+
+            <div class="player-info">
+
+                <h2 id="playerName">Player Name</h2>
+
+                <p id="playerClub">Club - Position</p>
+
+                <h3 id="playerPrice">£0M</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="stats-bar">
+
+        <div class="stat-box">
+            <h2 id="playerPoints">0</h2>
+            <p>Points</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="playerGoals">0</h2>
+            <p>Goals</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="playerAssists">0</h2>
+            <p>Assists</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="playerMatches">0</h2>
+            <p>Matches</p>
+        </div>
+
+    </div>
+
+    <div class="tabs">
+
+        <button class="tab active">Overview</button>
+
+        <button class="tab">Statistics</button>
+
+        <button class="tab">Fixtures</button>
+
+        <button class="tab">Game Log</button>
+
+    </div>
+
+    <div class="overview-card">
+
+        <h2>This Season</h2>
+
+        <div class="chart-placeholder">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+        </div>
+
+        <div class="season-stats">
+
+            <div>
+                <h3>Matches</h3>
+                <span id="seasonMatches">0</span>
+            </div>
+
+            <div>
+                <h3>Goals</h3>
+                <span id="seasonGoals">0</span>
+            </div>
+
+            <div>
+                <h3>Assists</h3>
+                <span id="seasonAssists">0</span>
+            </div>
+
+            <div>
+                <h3>Points</h3>
+                <span id="seasonPoints">0</span>
+            </div>
+
+        </div>
+
+        <button class="add-team" id="addTeamBtn">
+            Add To Team
+        </button>
+
+    </div>
+
+</section>
 
         </main>
 

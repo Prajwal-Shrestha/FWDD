@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard — Fantasy Football</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/leaderboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fa-solid fa-futbol"></i>
+        <h2>Fantasy Football</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="players.html">
+              <i class="fa-solid fa-user"></i>
+              Players
+            </a>
+          </li>
+          <li>
+            <a href="matchdetails.html">
+              <i class="fa-solid fa-calendar"></i>
+              Match Details
+            </a>
+          </li>
+          <li></li>
+          <li>
+            <a href="my-team.html">
+              <i class="fa-solid fa-shirt"></i>
+              My Team
+            </a>
+          </li>
+          <li>
+            <a href="transfer.html">
+              <i class="fa-solid fa-right-left"></i>
+              Transfer
+            </a>
+          </li>
+          <li class="active">
+            <a href="leaderboard.html">
+              <i class="fa-solid fa-trophy"></i>
+              Leaderboard
+            </a>
+          </li>
+          <li>
+            <a href="league.html">
+              <i class="fa-solid fa-futbol"></i>
+              League
+            </a>
+          </li>
+          <li>
+            <a href="statistics.html">
+              <i class="fa-solid fa-chart-column"></i>
+              Statistics
+            </a>
+          </li>
+          <li>
+            <a href="live.html">
+              <i class="fa-solid fa-tv"></i>
+              Live
+            </a>
+          </li>
+          <li>
+            <a href="fixtures.html">
+              <i class="fa-solid fa-diagram-project"></i>
+              Fixtures
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h1>Leaderboard</h1>
+        <div class="profile-chip">
+          <div class="avatar-circle">RB</div>
+          Profile
+        </div>
+      </div>
+
+      <div class="tabs-row" id="tabs">
+        <button class="tab-btn active" data-tab="all">All Leagues</button>
+        <button class="tab-btn" data-tab="my">My Leagues</button>
+        <button class="tab-btn" data-tab="friends">Friends</button>
+      </div>
+
+      <div class="controls-row">
+        <div class="select-wrap">
+          <button class="contest-select" id="contestSelectBtn">
+            <span id="contestLabel">Mega Contest</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="contest-dropdown" id="contestDropdown">
+            <button class="selected" data-contest="Mega Contest">
+              Mega Contest
+            </button>
+            <button data-contest="Weekly Contest">Weekly Contest</button>
+            <button data-contest="Head to Head">Head to Head</button>
+            <button data-contest="Season Long">Season Long</button>
+          </div>
+        </div>
+
+        <button class="filters-btn" id="filtersBtn">
+          <i class="fa-solid fa-filter"></i> Filters
+          <span class="filter-count" id="filterCount" style="display: none"
+            >0</span
+          >
+        </button>
+
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by team or user"
+          />
+        </div>
+      </div>
+
+      <div class="filters-panel" id="filtersPanel">
+        <div class="filter-group">
+          <label>Gameweek</label>
+          <div class="filter-chip-group" id="gwFilters">
+            <button class="filter-chip selected" data-gw="all">All Time</button>
+            <button class="filter-chip" data-gw="latest">Latest GW</button>
+            <button class="filter-chip" data-gw="last3">Last 3 GWs</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Trend</label>
+          <div class="filter-chip-group" id="trendFilters">
+            <button class="filter-chip selected" data-trend="all">All</button>
+            <button class="filter-chip" data-trend="up">Rising</button>
+            <button class="filter-chip" data-trend="down">Falling</button>
+          </div>
+        </div>
+        <button class="reset-btn" id="resetFilters">Reset filters</button>
+      </div>
+
+      <div id="boardWrap">
+        <div class="board">
+          <div class="board-header">
+            <div class="col-rank">Rank</div>
+            <div class="col-team">Team / User</div>
+            <div class="col-points">Points</div>
+            <div class="col-winnings">Winnings</div>
+          </div>
+          <div id="boardBody"></div>
+        </div>
+
+        <div class="your-rank-bar" id="yourRankBar">
+          <div class="left">
+            <div class="badge" id="yourRankNum">—</div>
+            <div>
+              <div class="label">Your current rank</div>
+              <div class="value" id="yourTeamLabel">—</div>
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <div class="label">Points</div>
+              <div class="value" id="yourPointsLabel">—</div>
+            </div>
+            <div>
+              <div class="label">Winnings</div>
+              <div class="value" id="yourWinningsLabel">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyState" style="display: none">
+        <div class="empty-state">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>No results found</h3>
+          <p>Try a different search term or reset your filters.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/leaderboard.js"></script>
+  </body>
+</html>

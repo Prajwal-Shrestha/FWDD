@@ -1,17 +1,22 @@
 const playerGrid = document.getElementById("playerGrid");
 const searchInput = document.getElementById("searchPlayer");
-const positionFilter = document.getElementById("positionFilter");
-const clubFilter = document.getElementById("clubFilter");
-const sortFilter = document.getElementById("sortFilter");
 
 let players = [];
 
+/* ==========================================
+   LOAD PLAYERS
+========================================== */
+
 fetch("../data/players.json")
-    .then(res => res.json())
-    .then(data => {
-        players = data;
-        displayPlayers(players);
-    });
+  .then((res) => res.json())
+  .then((data) => {
+    players = data;
+    displayPlayers(players);
+  });
+
+/* ==========================================
+   DISPLAY PLAYERS
+========================================== */
 
 function displayPlayers(list) {
 
@@ -21,45 +26,66 @@ function displayPlayers(list) {
 
         playerGrid.innerHTML += `
 
-        <div class="player-card">
+        <div class="player-row">
 
-            <img src="${player.image}" alt="${player.name}">
+            <div class="player-info">
 
-            <h3>${player.name}</h3>
+                <img src="${player.image}" alt="${player.name}">
 
-            <p class="club">${player.club}</p>
+                <div class="player-text">
 
-            <span class="position">${player.position}</span>
+                    <h3>${player.name}</h3>
 
-            <div class="stats">
+                    <small>${player.club}</small>
 
-                <div class="stat">
-                    <h4>Price</h4>
-                    <p>£${player.price}M</p>
-                </div>
-
-                <div class="stat">
-                    <h4>Points</h4>
-                    <p>${player.points}</p>
-                </div>
-
-                <div class="stat">
-                    <h4>Goals</h4>
-                    <p>${player.goals}</p>
                 </div>
 
             </div>
 
-            <div class="buttons">
+            <div class="club">
 
-                <button class="view-btn"
+                ${player.club}
+
+            </div>
+
+            <div>
+
+                <span class="position">
+
+                    ${player.position}
+
+                </span>
+
+            </div>
+
+            <div class="price">
+
+                £${player.price}M
+
+            </div>
+
+            <div class="points">
+
+                ${player.points}
+
+            </div>
+
+            <div class="actions">
+
+                <button
+                    class="view-btn"
                     onclick="viewDetails(${player.id})">
+
                     View Details
+
                 </button>
 
-                <button class="team-btn"
+                <button
+                    class="team-btn"
                     onclick="addToTeam(${player.id})">
+
                     Add Team
+
                 </button>
 
             </div>
@@ -67,65 +93,43 @@ function displayPlayers(list) {
         </div>
 
         `;
+
     });
+
 }
 
-function filterPlayers() {
+/* ==========================================
+   SEARCH PLAYER
+========================================== */
 
-    let filtered = [...players];
+searchInput.addEventListener("keyup", () => {
 
-    const search = searchInput.value.toLowerCase();
-    const position = positionFilter.value;
-    const club = clubFilter.value;
-    const sort = sortFilter.value;
+    const value = searchInput.value.toLowerCase();
 
-    if (search) {
-        filtered = filtered.filter(player =>
-            player.name.toLowerCase().includes(search)
-        );
-    }
-
-    if (position) {
-        filtered = filtered.filter(player =>
-            player.position === position
-        );
-    }
-
-    if (club) {
-        filtered = filtered.filter(player =>
-            player.club === club
-        );
-    }
-
-    if (sort === "points") {
-        filtered.sort((a, b) => b.points - a.points);
-    }
-
-    if (sort === "price") {
-        filtered.sort((a, b) => b.price - a.price);
-    }
+    const filtered = players.filter(player =>
+        player.name.toLowerCase().includes(value)
+    );
 
     displayPlayers(filtered);
 
-}
+});
 
-searchInput.addEventListener("keyup", filterPlayers);
-positionFilter.addEventListener("change", filterPlayers);
-clubFilter.addEventListener("change", filterPlayers);
-sortFilter.addEventListener("change", filterPlayers);
+/* ==========================================
+   ADD TO TEAM
+========================================== */
 
-function addToTeam(id) {
+function addToTeam(id){
 
     const player = players.find(p => p.id === id);
 
     let team = JSON.parse(localStorage.getItem("team")) || [];
 
-    if (team.some(p => p.id === id)) {
+    if(team.some(p => p.id === id)){
         alert("Player already added!");
         return;
     }
 
-    if (team.length >= 11) {
+    if(team.length >= 11){
         alert("Maximum 11 players allowed!");
         return;
     }
@@ -134,10 +138,15 @@ function addToTeam(id) {
 
     localStorage.setItem("team", JSON.stringify(team));
 
-    alert(`${player.name} added to your team!`);
+    alert(player.name + " added to your team!");
+
 }
 
-function viewDetails(id) {
+/* ==========================================
+   VIEW DETAILS
+========================================== */
+
+function viewDetails(id){
 
     localStorage.setItem("selectedPlayer", id);
 

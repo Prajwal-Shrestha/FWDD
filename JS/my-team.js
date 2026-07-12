@@ -1,59 +1,65 @@
-const pitchPlayers = document.getElementById("pitchPlayers");
-
 const totalPlayers = document.getElementById("totalPlayers");
-
 const totalPoints = document.getElementById("totalPoints");
-
 const totalBudget = document.getElementById("totalBudget");
 
 let team = JSON.parse(localStorage.getItem("savedTeam")) || [];
 
-function loadTeam(){
+if (team.length === 0) {
+    team = JSON.parse(localStorage.getItem("team")) || [];
+}
 
-pitchPlayers.innerHTML="";
+function loadTeam() {
 
-let points=0;
+    let points = 0;
+    let budget = 0;
 
-let budget=0;
+    // Clear every position
+    for (let i = 0; i < 9; i++) {
+        const slot = document.getElementById(`player${i}`);
+        if (slot) slot.innerHTML = "";
+    }
 
-team.forEach(player=>{
+    team.forEach((player, index) => {
 
-points+=player.points;
+        if (index > 8) return;
 
-budget+=player.price;
+        points += player.points;
+        budget += player.price;
 
-pitchPlayers.innerHTML+=`
+        const slot = document.getElementById(`player${index}`);
 
-<div class="player-circle">
+        if (slot) {
 
-${player.name}
+            slot.innerHTML = `
+                <div class="player-circle">
+                    <i class="fa-solid fa-user"></i>
+                </div>
 
-</div>
+                <div class="player-name">
+                    ${player.position}<br>
+                    ${player.name}
+                </div>
+            `;
+        }
 
-`;
+    });
 
-});
-
-totalPlayers.innerText=team.length;
-
-totalPoints.innerText=points;
-
-totalBudget.innerText="£"+budget.toFixed(1)+"M";
+    totalPlayers.textContent = team.length;
+    totalPoints.textContent = points;
+    totalBudget.textContent = "£" + budget.toFixed(1) + "M";
 
 }
 
 loadTeam();
 
-document.getElementById("resetTeam").onclick=function(){
+document.getElementById("resetTeam").addEventListener("click", () => {
 
-if(confirm("Reset your team?")){
+    if (confirm("Reset your team?")) {
 
-localStorage.removeItem("team");
+        localStorage.removeItem("team");
+        localStorage.removeItem("savedTeam");
 
-localStorage.removeItem("savedTeam");
+        location.reload();
+    }
 
-location.reload();
-
-}
-
-}
+});

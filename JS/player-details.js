@@ -1,119 +1,75 @@
-const container = document.getElementById("playerDetails");
+const playerImage = document.getElementById("playerImage");
+const playerName = document.getElementById("playerName");
+const playerClub = document.getElementById("playerClub");
+const playerPrice = document.getElementById("playerPrice");
+
+const playerPoints = document.getElementById("playerPoints");
+const playerGoals = document.getElementById("playerGoals");
+const playerAssists = document.getElementById("playerAssists");
+const playerMatches = document.getElementById("playerMatches");
+
+const seasonMatches = document.getElementById("seasonMatches");
+const seasonGoals = document.getElementById("seasonGoals");
+const seasonAssists = document.getElementById("seasonAssists");
+const seasonPoints = document.getElementById("seasonPoints");
+
+const addTeamBtn = document.getElementById("addTeamBtn");
 
 const id = Number(localStorage.getItem("selectedPlayer"));
 
 fetch("../data/players.json")
+.then(res => res.json())
+.then(players => {
 
-.then(res=>res.json())
+    const player = players.find(p => p.id === id);
 
-.then(players=>{
+    if(!player){
+        alert("Player not found");
+        return;
+    }
 
-const player = players.find(p=>p.id===id);
+    playerImage.src = player.image;
+    playerImage.alt = player.name;
 
-container.innerHTML=`
+    playerName.textContent = player.name;
+    playerClub.textContent = `${player.club} • ${player.position}`;
+    playerPrice.textContent = `£${player.price}M`;
 
-<div class="details-card">
+    playerPoints.textContent = player.points;
+    playerGoals.textContent = player.goals;
+    playerAssists.textContent = player.assists;
 
-<img src="${player.image}">
+    // If matches exist in JSON use them, otherwise default to 38
+    playerMatches.textContent = player.matches || 38;
 
-<div class="player-info">
+    seasonMatches.textContent = player.matches || 38;
+    seasonGoals.textContent = player.goals;
+    seasonAssists.textContent = player.assists;
+    seasonPoints.textContent = player.points;
 
-<h2>${player.name}</h2>
-
-<h4>${player.club}</h4>
-
-<div class="info-grid">
-
-<div class="info-box">
-
-<h3>Position</h3>
-
-<p>${player.position}</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Price</h3>
-
-<p>£${player.price}M</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Goals</h3>
-
-<p>${player.goals}</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Assists</h3>
-
-<p>${player.assists}</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Fantasy Points</h3>
-
-<p>${player.points}</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Club</h3>
-
-<p>${player.club}</p>
-
-</div>
-
-</div>
-
-<button class="add-team" onclick="addPlayer(${player.id})">
-
-Add To Team
-
-</button>
-
-</div>
-
-</div>
-
-`;
+    addTeamBtn.onclick = function(){
+        addPlayer(player);
+    };
 
 });
 
-function addPlayer(id){
+function addPlayer(player){
 
-fetch("../data/players.json")
+    let team = JSON.parse(localStorage.getItem("team")) || [];
 
-.then(res=>res.json())
+    if(team.some(p => p.id === player.id)){
+        alert("Player already added!");
+        return;
+    }
 
-.then(players=>{
+    if(team.length >= 11){
+        alert("Maximum 11 players allowed!");
+        return;
+    }
 
-const player=players.find(p=>p.id===id);
+    team.push(player);
 
-let team=JSON.parse(localStorage.getItem("team"))||[];
+    localStorage.setItem("team", JSON.stringify(team));
 
-if(team.some(p=>p.id===id)){
-
-alert("Player already in team");
-
-return;
-
-}
-
-team.push(player);
-
-localStorage.setItem("team",JSON.stringify(team));
-
-alert(player.name+" added successfully!");
-
-});
-
+    alert(player.name + " added to your team!");
 }
