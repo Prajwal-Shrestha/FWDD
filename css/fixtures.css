@@ -1,40 +1,34 @@
 * {
   box-sizing: border-box;
 }
-html,
+
 body {
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: "Work Sans", sans-serif;
-  background: #f3f7f4;
-  color: #0b1220;
-  min-height: 100vh;
-}
-h1,
-h2,
-h3,
-.brand,
-.badge-txt {
-  font-family: "Space Grotesk", sans-serif;
-}
+
 a {
-  color: inherit;
   text-decoration: none;
-}
-button {
-  font-family: inherit;
+  color: inherit;
 }
 ul {
   list-style: none;
 }
-
-
-.app {
-  min-height: 100vh;
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
+/* ===== Sidebar (as provided) ===== */
 .sidebar {
   width: 260px;
   background: #111827;
@@ -46,29 +40,24 @@ ul {
   padding: 25px;
   overflow: auto;
 }
-
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 45px;
 }
-
 .logo i {
   color: #16a34a;
   font-size: 32px;
 }
-
 .logo h2 {
   font-size: 22px;
   font-weight: 700;
 }
-
 .sidebar ul li {
-    margin-left:-50px;
+  margin-left: -50px;
   margin-bottom: 10px;
 }
-
 .sidebar ul li a {
   display: flex;
   align-items: center;
@@ -76,18 +65,16 @@ ul {
   padding: 14px 18px;
   border-radius: 10px;
   transition: 0.3s;
+  color: white;
 }
-
 .sidebar ul li a i {
   width: 20px;
-  height:20px;
+  height: 20px;
   text-align: center;
 }
-
 .sidebar ul li a:hover {
   background: #16a34a;
 }
-
 .sidebar ul li.active a {
   background: #16a34a;
 }
