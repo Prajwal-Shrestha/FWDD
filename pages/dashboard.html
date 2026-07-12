@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-futbol"></i>
+          <h2>Fantasy Football</h2>
+        </div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="players.html">
+                <i class="fa-solid fa-users"></i>
+                Players
+              </a>
+            </li>
+            <li>
+              <a href="matchdetails.html">
+                <i class="fa-solid fa-calendar"></i>
+                Match Details
+              </a>
+            </li>
+            <li></li>
+            <li>
+              <a href="my-team.html">
+                <i class="fa-solid fa-shirt"></i>
+                My Team
+              </a>
+            </li>
+            <li>
+              <a href="transfer.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transfer
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-trophy"></i>
+                Leaderboard
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-futbol"></i>
+                League
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                Statistics
+              </a>
+            </li>
+            <li>
+              <a href="live.html">
+                <i class="fa-solid fa-tv"></i>
+                Live
+              </a>
+            </li>
+            <li>
+              <a href="fixtures.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                Fixtures
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <!-- Header -->
+        <header class="header">
+          <div>
+            <h1>Welcome back, Alex! 👋</h1>
+            <p>Ready to win your next match?</p>
+          </div>
+
+
+            <div class="profile" tabindex="0">
+      <div class="avatar"><i class="fa-solid fa-user"></i></div>
+      <span><a href="profile.html">Profile</a></span>
+    </div>
+        </header>
+
+        <!-- Top Cards -->
+        <section class="top-cards">
+          <!-- Upcoming Match -->
+          <div class="card match-card">
+            <h3>Upcoming Match</h3>
+
+            <div class="teams">
+              <div class="team">
+                <img
+                  src="../assets/images/manchestercity.png"
+                />
+                <h4>Man United</h4>
+              </div>
+
+              <div class="vs">
+                <h2>VS</h2>
+                <p>26 May 2024</p>
+                <small>7:30 PM</small>
+              </div>
+
+              <div class="team">
+                <img
+                  src="../assets/images/chelsea.png"
+                />
+                <h4>Liverpool</h4>
+              </div>
+            </div>
+
+            <div class="countdown">
+              <div>
+                <h2>01</h2>
+                <span>Days</span>
+              </div>
+
+              <div>
+                <h2>06</h2>
+                <span>Hours</span>
+              </div>
+
+              <div>
+                <h2>45</h2>
+                <span>Mins</span>
+              </div>
+
+              <div>
+                <h2>30</h2>
+                <span>Secs</span>
+              </div>
+            </div>
+
+            <button><a href="matchdetails.html">View Match Center</a></button>
+          </div>
+
+          <!-- My Team -->
+          <div class="card team-card">
+            <h3>My Team</h3>
+
+            <div class="pitch">
+              <img
+                src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=700"
+                alt="Pitch"
+              />
+            </div>
+
+            <div class="team-info">
+              <p><strong>Formation:</strong> 4-3-3</p>
+
+              <p><strong>Team Value:</strong> £98.5M</p>
+
+              <p><strong>Total Points:</strong> 2450</p>
+
+              <button><a href="my-team.html">Manage Team</a></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Middle -->
+        <section class="middle">
+          <!-- Contests -->
+          <div class="card contests">
+            <div class="title">
+              <h3>My Contests</h3>
+              <a href="#">View All</a>
+            </div>
+
+            <table>
+              <tr>
+                <th>Contest</th>
+                <th>Entry</th>
+                <th>Prize</th>
+                <th>Status</th>
+              </tr>
+
+              <tr>
+                <td>Mega Contest</td>
+                <td>£49</td>
+                <td>£50,000</td>
+                <td><span class="joined">Joined</span></td>
+              </tr>
+
+              <tr>
+                <td>Head to Head</td>
+                <td>£25</td>
+                <td>£100</td>
+                <td><span class="live">Live</span></td>
+              </tr>
+
+              <tr>
+                <td>Mini Contest</td>
+                <td>£10</td>
+                <td>£500</td>
+                <td><span class="upcoming">Upcoming</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Right -->
+          <div class="right-column">
+            <!-- Wallet -->
+
+            <div class="card wallet">
+              <h3>Wallet</h3>
+
+              <h1>£1,250</h1>
+
+              <button>Add Cash</button>
+            </div>
+
+            <!-- Performance -->
+
+            <div class="card performance">
+              <h3>Recent Performance</h3>
+
+              <div class="result">
+                <span class="win">W</span>
+                <span class="win">W</span>
+                <span class="loss">L</span>
+                <span class="win">W</span>
+                <span class="win">W</span>
+              </div>
+            </div>
+
+            <!-- Leaderboard -->
+
+            <div class="card leaderboard">
+              <h3>Leaderboard</h3>
+
+              <h1>#24</h1>
+
+              <p>of 5,000 Players</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Players -->
+
+        <section class="players-section">
+          <h2>Top Picks For You</h2>
+
+          <div class="players">
+            <div class="player-card">
+              <img src="../assets/images/haaland.png" />
+
+              <h4>Erling Haaland</h4>
+
+              <p>£14.5M</p>
+
+              <button>+</button>
+            </div>
+
+            <div class="player-card">
+              <img src="../assets/images/saka.png" />
+
+              <h4>Bukayo Saka</h4>
+
+              <p>£8.5M</p>
+
+              <button>+</button>
+            </div>
+
+            <div class="player-card">
+              <img src="../assets/images/salah.png" />
+
+              <h4>Mohamed Salah</h4>
+
+              <p>£12.5M</p>
+
+              <button>+</button>
+            </div>
+
+            <div class="player-card">
+              <img src="../assets/images/palmer.png" />
+
+              <h4>Cole Palmer</h4>
+
+              <p>£7.5M</p>
+
+              <button>+</button>
+            </div>
+
+            <div class="player-card">
+              <img src="../assets/images/vinicius.png" />
+
+              <h4>Vini Jr.</h4>
+
+              <p>£9.5M</p>
+
+              <button>+</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

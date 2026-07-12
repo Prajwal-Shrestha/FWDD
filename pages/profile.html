@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football League - Profile</title>
+
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-futbol"></i>
+          <h2>Fantasy Football</h2>
+        </div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="players.html">
+                <i class="fa-solid fa-users"></i>
+                Players
+              </a>
+            </li>
+            <li>
+              <a href="matchdetails.html">
+                <i class="fa-solid fa-calendar"></i>
+                Match Details
+              </a>
+            </li>
+            <li></li>
+            <li>
+              <a href="my-team.html">
+                <i class="fa-solid fa-shirt"></i>
+                My Team
+              </a>
+            </li>
+            <li>
+              <a href="transfer.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transfer
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-trophy"></i>
+                Leaderboard
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-futbol"></i>
+                League
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                Statistics
+              </a>
+            </li>
+            <li>
+              <a href="live.html">
+                <i class="fa-solid fa-tv"></i>
+                Live
+              </a>
+            </li>
+            <li>
+              <a href="fixtures.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                Fixtures
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="modal" id="editModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <h2>Edit Profile</h2>
+
+          <label>Name</label>
+          <input type="text" id="nameInput" value="Prajwal Shrestha" />
+
+          <label>Profession</label>
+          <input type="text" id="jobInput" value="Fantasy Enthusiast" />
+
+          <label>Member Since</label>
+          <input type="text" id="memberInput" value="july 2026" />
+
+          <button class="save-btn" id="saveProfile">Save Changes</button>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="profile-header">
+          <div class="profile-left">
+            <img src="../assets/images/profile.jpg" alt="profile" />
+
+            <div>
+              <h1 id="profileName">Prajwal Shrestha</h1>
+              <h3 id="ProfileJob">Fantasy Enthusiast</h3>
+              <p id="profileMember">Member Since: July 2026</p>
+            </div>
+          </div>
+
+          <button class="edit-btn">
+            <i class="fa-solid fa-pen"></i>
+
+            Edit Profile
+          </button>
+        </div>
+
+        <div class="stats">
+          <div class="card">
+            <p>Matches Played</p>
+
+            <h2>56</h2>
+          </div>
+
+          <div class="card">
+            <p>Contests Won</p>
+
+            <h2>23</h2>
+          </div>
+
+          <div class="card">
+            <p>Win Percentage</p>
+
+            <h2>41%</h2>
+          </div>
+
+          <div class="card">
+            <p>Total Winnings</p>
+
+            <h2>£25,430</h2>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="overview">Overview</button>
+
+          <button class="tab" data-tab="teams">My Teams</button>
+
+          <button class="tab" data-tab="history">History</button>
+
+          <button class="tab" data-tab="achievement">Achievements</button>
+        </div>
+
+        <div id="overview" class="tab-content active">
+          <div class="content-grid">
+            <div class="box">
+              <h2>About Me</h2>
+
+              <p>
+                Passionate Fantasy Premier League manager. I enjoy analyzing
+                player statistics, predicting match outcomes, and building
+                championship-winning squads.
+              </p>
+            </div>
+
+            <div class="box">
+              <h2>Top Achievements</h2>
+
+              <ul class="achievement-list">
+                <li>
+                  <i class="fa-solid fa-trophy"></i>
+
+                  Fantasy Premier League Winner 2024
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-trophy"></i>
+
+                  Top 1% Global Rank
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-trophy"></i>
+
+                  5x Monthly Contest Champion
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="teams" class="tab-content">
+          <div class="team-box">
+            <div class="team-header">
+              <div>
+                <h2>Dream XI</h2>
+                <p>Premier League Squad</p>
+              </div>
+
+              <span class="status">Active Team</span>
+            </div>
+
+            <div class="team-stats">
+              <div class="team-stat">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Formation</h3>
+                <span>4-3-3</span>
+              </div>
+
+              <div class="team-stat">
+                <i class="fa-solid fa-star"></i>
+                <h3>Total Points</h3>
+                <span>1520</span>
+              </div>
+
+              <div class="team-stat">
+                <i class="fa-solid fa-coins"></i>
+                <h3>Team Value</h3>
+                <span>£105.8M</span>
+              </div>
+            </div>
+
+            <h2 class="starting-title">Starting XI</h2>
+
+            <div class="players-grid">
+              <div class="player-card captain">
+                <img src="../assets/images/haaland.png" />
+
+                <h4>Erling Haaland</h4>
+
+                <p>ST</p>
+
+                <span class="captain-badge">Captain</span>
+              </div>
+
+              <div class="player-card">
+                <img src="../assets/images/salah.png" />
+
+                <h4>Mohamed Salah</h4>
+
+                <p>RW</p>
+              </div>
+
+              <div class="player-card">
+                <img src="../assets/images/saka.png" />
+
+                <h4>Bukayo Saka</h4>
+
+                <p>LW</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="history" class="tab-content">
+          <div class="box full">
+            <h2>Match History</h2>
+
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>League</th>
+                  <th>Rank</th>
+                  <th>Points</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>12 May 2026</td>
+                  <td>Premier League</td>
+                  <td>#1</td>
+                  <td>96</td>
+                  <td><span class="win">🏆 Winner</span></td>
+                </tr>
+
+                <tr>
+                  <td>05 May 2026</td>
+                  <td>Champions League</td>
+                  <td>#3</td>
+                  <td>82</td>
+                  <td><span class="top">🥉 Top 3</span></td>
+                </tr>
+
+                <tr>
+                  <td>28 Apr 2026</td>
+                  <td>Premier League</td>
+                  <td>#8</td>
+                  <td>74</td>
+                  <td><span class="normal">Qualified</span></td>
+                </tr>
+
+                <tr>
+                  <td>20 Apr 2026</td>
+                  <td>Fantasy Cup</td>
+                  <td>#2</td>
+                  <td>89</td>
+                  <td><span class="runner">🥈 Runner Up</span></td>
+                </tr>
+
+                <tr>
+                  <td>15 Apr 2026</td>
+                  <td>Premier League</td>
+                  <td>#5</td>
+                  <td>80</td>
+                  <td><span class="normal">Qualified</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="achievement" class="tab-content">
+          <div class="achievement-grid">
+            <div class="achievement-card">
+              <i class="fa-solid fa-trophy"></i>
+              <h3>League Champion</h3>
+              <p>Won the Fantasy League 2024</p>
+            </div>
+
+            <div class="achievement-card">
+              <i class="fa-solid fa-fire"></i>
+              <h3>5 Win Streak</h3>
+              <p>Won 5 matches in a row</p>
+            </div>
+
+            <div class="achievement-card">
+              <i class="fa-solid fa-star"></i>
+              <h3>Elite Manager</h3>
+              <p>Reached Elite Division</p>
+            </div>
+
+            <div class="achievement-card">
+              <i class="fa-solid fa-crown"></i>
+              <h3>Top 100</h3>
+              <p>Finished inside Top 100</p>
+            </div>
+
+            <div class="achievement-card">
+              <i class="fa-solid fa-futbol"></i>
+              <h3>Goal Predictor</h3>
+              <p>Highest prediction accuracy</p>
+            </div>
+
+            <div class="achievement-card">
+              <i class="fa-solid fa-medal"></i>
+              <h3>Best Captain</h3>
+              <p>Captain scored most points</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/profile.js"></script>
+  </body>
+</html>
