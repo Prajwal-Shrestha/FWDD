@@ -1,170 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>My Team | Fantasy Football</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="../css/my-team.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/my-team.css" />
+  </head>
 
-</head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-futbol"></i>
+          <h2>Fantasy Football</h2>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="players.html">
+                <i class="fa-solid fa-user"></i>
+                Players
+              </a>
+            </li>
+            <li>
+              <a href="matchdetails.html">
+                <i class="fa-solid fa-calendar"></i>
+                Match Details
+              </a>
+            </li>
+            <li class="active">
+              <a href="my-team.html">
+                <i class="fa-solid fa-shirt"></i>
+                My Team
+              </a>
+            </li>
 
-<body>
+            <li>
+              <a href="transfer.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transfer
+              </a>
+            </li>
+            <li>
+              <a href="leaderboard.html">
+                <i class="fa-solid fa-trophy"></i>
+                Leaderboard
+              </a>
+            </li>
+            <li>
+              <a href="league.html">
+                <i class="fa-solid fa-futbol"></i>
+                League
+              </a>
+            </li>
+            <li>
+              <a href="statistics.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Statistics
+              </a>
+            </li>
+            <li>
+              <a href="live.html">
+                <i class="fa-solid fa-tv"></i>
+                Live
+              </a>
+            </li>
+            <li>
+              <a href="points_history.html">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Points History
+              </a>
+            </li>
+            <li>
+              <a href="fixtures.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                Fixtures
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-<div class="container">
-
-    <!-- Sidebar -->
- <aside class="sidebar">
-      <div class="logo">
-        <i class="fa-solid fa-futbol"></i>
-        <h2>Fantasy Football</h2>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="dashboard.html">
-              <i class="fa-solid fa-house"></i>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="players.html">
-              <i class="fa-solid fa-user"></i>
-              Players
-            </a>
-          </li>
-          <li>
-            <a href="matchdetails.html">
-              <i class="fa-solid fa-calendar"></i>
-              Match Details
-            </a>
-          </li>
-          <li></li>
-          <li class="active">
-            <a href="my-team.html">
-              <i class="fa-solid fa-shirt"></i>
-              My Team
-            </a>
-          </li>
-          <li>
-            <a href="transfer.html">
-              <i class="fa-solid fa-right-left"></i>
-              Transfer
-            </a>
-          </li>
-          <li>
-            <a href="leaderboard.html">
-              <i class="fa-solid fa-trophy"></i>
-              Leaderboard
-            </a>
-          </li>
-          <li>
-            <a href="league.html">
-              <i class="fa-solid fa-futbol"></i>
-              League
-            </a>
-          </li>
-          <li>
-            <a href="statistics.html">
-              <i class="fa-solid fa-chart-column"></i>
-              Statistics
-            </a>
-          </li>
-          <li>
-            <a href="live.html">
-              <i class="fa-solid fa-tv"></i>
-              Live
-            </a>
-          </li>
-          <li>
-            <a href="fixtures.html">
-              <i class="fa-solid fa-diagram-project"></i>
-              Fixtures
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
-  <main class="main">
-
-    <header class="topbar">
-
-        <div>
+      <main class="main">
+        <header class="topbar">
+          <div>
             <h1>My Team</h1>
             <p>Your saved fantasy squad.</p>
-        </div>
+          </div>
+        </header>
 
-    </header>
-
-    <div class="my-team-layout">
-
-        <!-- Football Pitch -->
-        <div class="pitch">
-
+        <div class="my-team-layout">
+          <!-- Football Pitch -->
+          <div class="pitch">
             <div id="pitchPlayers" class="pitchPlayers">
+              <!-- Forwards -->
+              <div class="player-slot st" id="player0"></div>
 
-                <!-- Forwards -->
-                <div class="player-slot st" id="player0"></div>
+              <!-- Midfield -->
+              <div class="player-slot lm" id="player1"></div>
+              <div class="player-slot cm" id="player2"></div>
+              <div class="player-slot rm" id="player3"></div>
 
-                <!-- Midfield -->
-                <div class="player-slot lm" id="player1"></div>
-                <div class="player-slot cm" id="player2"></div>
-                <div class="player-slot rm" id="player3"></div>
+              <!-- Defenders -->
+              <div class="player-slot lb" id="player4"></div>
+              <div class="player-slot cb1" id="player5"></div>
+              <div class="player-slot cb2" id="player6"></div>
+              <div class="player-slot rb" id="player7"></div>
 
-                <!-- Defenders -->
-                <div class="player-slot lb" id="player4"></div>
-                <div class="player-slot cb1" id="player5"></div>
-                <div class="player-slot cb2" id="player6"></div>
-                <div class="player-slot rb" id="player7"></div>
+              <!-- Goalkeeper -->
+              <div class="player-slot gk" id="player8"></div>
+            </div>
+          </div>
 
-                <!-- Goalkeeper -->
-                <div class="player-slot gk" id="player8"></div>
-
+          <!-- Right Side -->
+          <div class="team-summary">
+            <div class="summary-card">
+              <h3>Total Players</h3>
+              <h1 id="totalPlayers">0</h1>
             </div>
 
+            <div class="summary-card">
+              <h3>Total Points</h3>
+              <h1 id="totalPoints">0</h1>
+            </div>
+
+            <div class="summary-card">
+              <h3>Total Budget</h3>
+              <h1 id="totalBudget">£0M</h1>
+            </div>
+
+            <button id="resetTeam">Reset Team</button>
+          </div>
         </div>
-
-        <!-- Right Side -->
-        <div class="team-summary">
-
-            <div class="summary-card">
-                <h3>Total Players</h3>
-                <h1 id="totalPlayers">0</h1>
-            </div>
-
-            <div class="summary-card">
-                <h3>Total Points</h3>
-                <h1 id="totalPoints">0</h1>
-            </div>
-
-            <div class="summary-card">
-                <h3>Total Budget</h3>
-                <h1 id="totalBudget">£0M</h1>
-            </div>
-
-            <button id="resetTeam">
-                Reset Team
-            </button>
-
-        </div>
-
+      </main>
     </div>
 
-</main>
-
-</div>
-
-<script src="../js/my-team.js"></script>
-
-</body>
-
+    <script src="../js/my-team.js"></script>
+  </body>
 </html>

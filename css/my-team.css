@@ -1,263 +1,244 @@
-/* ==========================================
-   GOOGLE FONT
-========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ==========================================
-   RESET
-========================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f5f7fb;
-    color:#1e293b;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-
-a{
-    text-decoration:none;
-    color:inherit;
+ul {
+  list-style: none;
 }
-
-ul{
-    list-style:none;
-}
-
-button{
-    cursor:pointer;
-    border:none;
-    font-family:inherit;
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 /* ==========================================
    LAYOUT
 ========================================== */
 
-.container{
-    display:flex;
-    min-height:100vh;
+.container {
+  display: flex;
+  min-height: 100vh;
 }
 
-.main{
-    margin-left:260px;
-    flex:1;
-    padding:35px;
+.main {
+  margin-left: 260px;
+  flex: 1;
+  padding: 35px;
 }
 
 /* ==========================================
    SIDEBAR
 ========================================== */
-
-.sidebar{
-    width:260px;
-    background:#111827;
-    color:white;
-    position:fixed;
-    top:0;
-    left:0;
-    bottom:0;
-    padding:25px;
-    overflow:auto;
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
+  overflow: auto;
 }
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:45px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
 }
-
-.logo i{
-    color:#16a34a;
-    font-size:32px;
+.logo i {
+  color: #16a34a;
+  font-size: 32px;
 }
-
-.logo h2{
-    font-size:22px;
-    font-weight:700;
+.logo h2 {
+  font-size: 22px;
+  font-weight: 700;
 }
-
-.sidebar ul li{
-    margin-bottom:10px;
+.sidebar ul li {
+  margin-left: -50px;
+  margin-bottom: 10px;
 }
-
-.sidebar ul li a{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:14px 18px;
-    border-radius:10px;
-    transition:.3s;
-    color:white;
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+  color: white;
 }
-
-.sidebar ul li a i{
-    width:20px;
-    text-align:center;
+.sidebar ul li a i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
-
-.sidebar ul li a:hover{
-    background:#16a34a;
+.sidebar ul li a:hover {
+  background: #16a34a;
 }
-
-.sidebar ul li.active a{
-    background:#16a34a;
+.sidebar ul li.active a {
+  background: #16a34a;
 }
-
 /* ==========================================
    TOP BAR
 ========================================== */
 
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:35px;
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
 }
 
-.topbar h1{
-    font-size:34px;
-    margin-bottom:5px;
+.topbar h1 {
+  font-size: 34px;
+  margin-bottom: 5px;
 }
 
-.topbar p{
-    color:#64748b;
+.topbar p {
+  color: #64748b;
 }
 /* ==========================================
    MY TEAM LAYOUT
 ========================================== */
 
-.my-team-layout{
-    display:grid;
-    grid-template-columns:3fr 1fr;
-    gap:35px;
-    align-items:flex-start;
+.my-team-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 35px;
+  align-items: flex-start;
 }
 
 /* ==========================================
    FOOTBALL PITCH
 ========================================== */
 
-.pitch{
-    position:relative;
-    background:#1b8a3b;
-    border-radius:20px;
-    min-height:780px;
-    padding:30px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+.pitch {
+  position: relative;
+  background: #1b8a3b;
+  border-radius: 20px;
+  min-height: 780px;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Outer Line */
 
-.pitch::before{
-    content:"";
-    position:absolute;
-    top:20px;
-    left:20px;
-    right:20px;
-    bottom:20px;
-    border:5px solid rgba(255,255,255,.9);
+.pitch::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 5px solid rgba(255, 255, 255, 0.9);
 }
 
 /* Half Line */
 
-.pitch::after{
-    content:"";
-    position:absolute;
-    left:20px;
-    right:20px;
-    top:50%;
-    height:4px;
-    background:white;
+.pitch::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 50%;
+  height: 4px;
+  background: white;
 }
 
 /* Center Circle */
 
-.pitchPlayers::before{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    border:5px solid white;
-    border-radius:50%;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
+.pitchPlayers::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 5px solid white;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Penalty Boxes */
 
-.pitchPlayers{
-    position:relative;
-    width:100%;
-    height:720px;
+.pitchPlayers {
+  position: relative;
+  width: 100%;
+  height: 720px;
 }
 
 /* Top Penalty */
 
-.pitchPlayers::after{
-    content:"";
-    position:absolute;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:320px;
-    height:120px;
-    border:5px solid white;
-    border-top:none;
+.pitchPlayers::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 120px;
+  border: 5px solid white;
+  border-top: none;
 }
 
 /* Bottom Penalty */
 
-.pitch .bottom-box{
-    display:none;
+.pitch .bottom-box {
+  display: none;
 }
 
 /* ==========================================
    PLAYER
 ========================================== */
 
-.player-slot{
-    position:absolute;
-    width:90px;
-    text-align:center;
+.player-slot {
+  position: absolute;
+  width: 90px;
+  text-align: center;
 }
 
-.player-circle{
+.player-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #16a34a;
 
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:white;
-    border:4px solid #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  margin: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
 
-    margin:auto;
-    font-size:12px;
-    font-weight:700;
-    color:#16a34a;
-
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-.player-name{
-    margin-top:8px;
-    font-size:13px;
-    font-weight:600;
-    color:white;
+.player-name {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
 }
 
 /* ==========================================
@@ -266,197 +247,187 @@ button{
 
 /* ST */
 
-.st{
-    top:50px;
-    left:50%;
-    transform:translateX(-50%);
+.st {
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Midfield */
 
-.lm{
-    top:220px;
-    left:12%;
+.lm {
+  top: 220px;
+  left: 12%;
 }
 
-.cm{
-    top:220px;
-    left:50%;
-    transform:translateX(-50%);
+.cm {
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.rm{
-    top:220px;
-    right:12%;
+.rm {
+  top: 220px;
+  right: 12%;
 }
 
 /* Defence */
 
-.lb{
-    top:430px;
-    left:8%;
+.lb {
+  top: 430px;
+  left: 8%;
 }
 
-.cb1{
-    top:430px;
-    left:35%;
+.cb1 {
+  top: 430px;
+  left: 35%;
 }
 
-.cb2{
-    top:430px;
-    right:35%;
+.cb2 {
+  top: 430px;
+  right: 35%;
 }
 
-.rb{
-    top:430px;
-    right:8%;
+.rb {
+  top: 430px;
+  right: 8%;
 }
 
 /* GK */
 
-.gk{
-    bottom:40px;
-    left:50%;
-    transform:translateX(-50%);
+.gk {
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* ==========================================
    SUMMARY
 ========================================== */
 
-.team-summary{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
+.team-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.summary-card{
-    background:white;
-    border-radius:18px;
-    padding:30px 20px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+.summary-card {
+  background: white;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.summary-card h3{
-    color:#64748b;
-    margin-bottom:12px;
+.summary-card h3 {
+  color: #64748b;
+  margin-bottom: 12px;
 }
 
-.summary-card h1{
-    color:#16a34a;
-    font-size:38px;
+.summary-card h1 {
+  color: #16a34a;
+  font-size: 38px;
 }
 
-#resetTeam{
-    padding:15px;
-    background:#ef4444;
-    color:white;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:600;
-    transition:.3s;
+#resetTeam {
+  padding: 15px;
+  background: #ef4444;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-#resetTeam:hover{
-    background:#dc2626;
+#resetTeam:hover {
+  background: #dc2626;
 }
 
 /* ==========================================
    RESPONSIVE
 ========================================== */
 
-@media(max-width:992px){
+@media (max-width: 992px) {
+  .my-team-layout {
+    grid-template-columns: 1fr;
+  }
 
-    .my-team-layout{
-        grid-template-columns:1fr;
-    }
-
-    .pitch{
-        min-height:700px;
-    }
-
+  .pitch {
+    min-height: 700px;
+  }
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .player-slot {
+    width: 70px;
+  }
 
-    .player-slot{
-        width:70px;
-    }
+  .player-circle {
+    width: 55px;
+    height: 55px;
+    font-size: 10px;
+  }
 
-    .player-circle{
-        width:55px;
-        height:55px;
-        font-size:10px;
-    }
-
-    .player-name{
-        font-size:11px;
-    }
-
+  .player-name {
+    font-size: 11px;
+  }
 }
 /* ==========================================
    RESPONSIVE
 ========================================== */
 
-@media (max-width:992px){
+@media (max-width: 992px) {
+  .sidebar {
+    width: 220px;
+  }
 
-    .sidebar{
-        width:220px;
-    }
+  .main {
+    margin-left: 220px;
+  }
 
-    .main{
-        margin-left:220px;
-    }
-
-    .my-team-layout{
-        grid-template-columns:1fr;
-    }
-
+  .my-team-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-    .container{
-        flex-direction:column;
-    }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
 
-    .sidebar{
-        position:relative;
-        width:100%;
-        height:auto;
-    }
+  .main {
+    margin-left: 0;
+  }
 
-    .main{
-        margin-left:0;
-    }
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 
-    .topbar{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:20px;
-    }
+  .pitchPlayers {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .pitchPlayers{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .player-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 11px;
+  }
 
-    .player-circle{
-        width:80px;
-        height:80px;
-        font-size:11px;
-    }
-
-    .pitch{
-        min-height:auto;
-    }
-
+  .pitch {
+    min-height: auto;
+  }
 }
 
-@media (max-width:480px){
-
-    .pitchPlayers{
-        grid-template-columns:1fr;
-    }
-
+@media (max-width: 480px) {
+  .pitchPlayers {
+    grid-template-columns: 1fr;
+  }
 }
